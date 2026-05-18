@@ -1,10 +1,10 @@
-﻿import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import {
     BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis,
     CartesianGrid, Tooltip, ResponsiveContainer
 } from 'recharts';
-import { Users, Award, TrendingUp, Search, Filter, ChevronRight, Star } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Users, Award, TrendingUp, Search } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { rawRetentionData } from '../data/retentionData';
 
 const RetentionPage = () => {
@@ -77,7 +77,7 @@ const RetentionPage = () => {
         return filtered.sort((a, b) => b.registrations - a.registrations);
     }, [customerData, searchTerm, filterCategory]);
 
-    const StatCard = ({ title, value, icon: Icon, color, delay = 0 }) => (
+    const StatCard = ({ title, value, icon: Icon, color, delay = 0 }: any) => (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

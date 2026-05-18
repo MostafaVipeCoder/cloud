@@ -1,10 +1,10 @@
-import React, { useState, useMemo } from 'react';
+import { useMemo } from 'react';
 import {
     LineChart, Line, BarChart, Bar, XAxis, YAxis,
     CartesianGrid, Tooltip, Legend, ResponsiveContainer,
-    PieChart, Pie, Cell, AreaChart, Area
+    AreaChart, Area
 } from 'recharts';
-import { TrendingUp, DollarSign, Target, Coffee, Home, Clock, Gift, AlertTriangle } from 'lucide-react';
+import { TrendingUp, DollarSign, Target, Home, Gift, AlertTriangle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const FinancialPage = () => {
